@@ -6,7 +6,9 @@ header {
         display: none;
 
         input {
-            display: none;
+            // visibility: hidden;
+            position: absolute;
+            left: -10px;
         }
 
         label {
@@ -15,6 +17,7 @@ header {
             padding: 20px;
             border-radius: 0 0 10px 0;
             transition: 0.4s;
+            border: 2px dashed rgba(255, 255, 255, 0);
         }
 
         .menu {
@@ -29,9 +32,14 @@ header {
 
                 a {
                     color: $white;
-                    border: 2px dashed white;
+                    border: 2px dashed rgba(255, 255, 255, 0);
                     padding: 2px 4px;
                     border-radius: 10px;
+
+                    &:hover, &:focus {
+                        border: 2px dashed rgba(255, 255, 255, 1);
+                        outline: none;
+                    }
                 }
             }
         }
@@ -50,6 +58,12 @@ header {
         padding-bottom: 220px;
         padding-right: 140px;
     }
+
+    .hamburger input:focus + label {
+        border: 2px dashed rgba(255, 255, 255, 1);
+    }
+
+    
 
     .navigation {
         background: $primarySoft;

@@ -311,7 +311,8 @@ header .hamburger {
 }
 
 header .hamburger input {
-  display: none;
+  position: absolute;
+  left: -10px;
 }
 
 header .hamburger label {
@@ -321,6 +322,7 @@ header .hamburger label {
   border-radius: 0 0 10px 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border: 2px dashed rgba(255, 255, 255, 0);
 }
 
 header .hamburger .menu {
@@ -338,9 +340,14 @@ header .hamburger .menu li {
 
 header .hamburger .menu li a {
   color: white;
-  border: 2px dashed white;
+  border: 2px dashed rgba(255, 255, 255, 0);
   padding: 2px 4px;
   border-radius: 10px;
+}
+
+header .hamburger .menu li a:hover, header .hamburger .menu li a:focus {
+  border: 2px dashed white;
+  outline: none;
 }
 
 @media (max-width: 600px) {
@@ -357,6 +364,10 @@ header .hamburger input:checked ~ .menu {
 header .hamburger input:checked ~ label {
   padding-bottom: 220px;
   padding-right: 140px;
+}
+
+header .hamburger input:focus + label {
+  border: 2px dashed white;
 }
 
 header .navigation {
