@@ -273,7 +273,7 @@ html {
 }
 
 @font-face {
-  font-family: darksoul;
+  font-family: darksoul, serif;
   src: url(./fonts/Garamond.ttf);
 }
 
@@ -309,6 +309,7 @@ span {
 header .hamburger {
   position: fixed;
   top: 10px;
+  display: none;
 }
 
 header .hamburger input {
