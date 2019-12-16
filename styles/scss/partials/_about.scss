@@ -8,6 +8,7 @@
     width: 90%;
     margin: 10px auto;
     padding-bottom: 70px;
+    transition: 0.4s;
 
     .aboutContent {
         display: flex;
@@ -33,6 +34,11 @@
             }
         }
     }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        padding: 10px 0;
+    }
 }
 
 .skills {
@@ -41,6 +47,7 @@
     margin: 60px auto;
     border-radius: 10px;
     padding: 10px;
+    transition: 0.4s;
 
     .skillsContent {
         display: flex;
@@ -65,5 +72,10 @@
                 font-size: 3rem;
             }
         }
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+        padding: 0;
     }
 }

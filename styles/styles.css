@@ -268,6 +268,8 @@ html {
   letter-spacing: 3px;
   font-family: darksoul;
   color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @font-face {
@@ -307,12 +309,24 @@ span {
 header .hamburger {
   position: fixed;
   top: 10px;
-  display: none;
 }
 
 header .hamburger input {
   position: absolute;
   left: -10px;
+}
+
+header .hamburger input:checked ~ .menu {
+  display: block;
+}
+
+header .hamburger input:checked ~ label {
+  padding-bottom: 220px;
+  padding-right: 140px;
+}
+
+header .hamburger input:focus + label {
+  border: 2px dashed white;
 }
 
 header .hamburger label {
@@ -326,10 +340,7 @@ header .hamburger label {
 }
 
 header .hamburger .menu {
-  -webkit-transform: translateX(-500px);
-          transform: translateX(-500px);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  display: none;
 }
 
 header .hamburger .menu li {
@@ -354,20 +365,6 @@ header .hamburger .menu li a:hover, header .hamburger .menu li a:focus {
   header .hamburger {
     display: block;
   }
-}
-
-header .hamburger input:checked ~ .menu {
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
-}
-
-header .hamburger input:checked ~ label {
-  padding-bottom: 220px;
-  padding-right: 140px;
-}
-
-header .hamburger input:focus + label {
-  border: 2px dashed white;
 }
 
 header .navigation {
@@ -430,6 +427,12 @@ header .header {
 
 header .header h1 {
   font-size: 10rem;
+}
+
+@media (max-width: 560px) {
+  header .header h1 {
+    text-align: center;
+  }
 }
 
 header .header h2 {
@@ -508,6 +511,8 @@ header .scrollDown i {
   width: 90%;
   margin: 10px auto;
   padding-bottom: 70px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .about .aboutContent {
@@ -543,12 +548,21 @@ header .scrollDown i {
   }
 }
 
+@media (max-width: 600px) {
+  .about {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
 .skills {
   background: #3f3f3f;
   width: 90%;
   margin: 60px auto;
   border-radius: 10px;
   padding: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .skills .skillsContent {
@@ -578,6 +592,13 @@ header .scrollDown i {
 .skills .skillsContent li p {
   margin: 20px;
   font-size: 3rem;
+}
+
+@media (max-width: 600px) {
+  .skills {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .portfolioPiece {
@@ -663,6 +684,9 @@ header .scrollDown i {
   .portfolioPiece .pieceImage img {
     width: 300px;
   }
+  .portfolioPiece .pieceContent .links a {
+    margin: 0 auto;
+  }
 }
 
 .contact {
@@ -739,6 +763,24 @@ header .scrollDown i {
   }
 }
 
+@media (max-width: 600px) {
+  .contact form .formInfo input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact form .formInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    left: -5px;
+  }
+}
+
 .contact form textarea {
   width: 90%;
   height: 70%;
@@ -766,6 +808,12 @@ header .scrollDown i {
   color: white;
 }
 
+@media (max-width: 600px) {
+  .contact form textarea {
+    width: 100%;
+  }
+}
+
 .contact form button {
   border: 2px solid white;
   background: #3f3f3f;
@@ -777,6 +825,18 @@ header .scrollDown i {
 
 .contact form button:focus, .contact form button:hover {
   border: 2px dashed white;
+}
+
+@media (max-width: 1000px) {
+  .contact form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact form {
+    width: 100%;
+  }
 }
 
 .contact ul {
@@ -801,6 +861,18 @@ header .scrollDown i {
 .contact ul li a:focus, .contact ul li a:hover {
   border: 2px dashed white;
   outline: none;
+}
+
+@media (max-width: 500px) {
+  .contact ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer {
