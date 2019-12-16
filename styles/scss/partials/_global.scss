@@ -1,0 +1,58 @@
+.sr-only:not(:focus):not(:active) { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(00 0 0);
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+html {
+    font-size: 62.5%;
+    letter-spacing: 3px;
+    font-family: darksoul;
+    color: $white;
+}
+
+@font-face {
+    font-family: darksoul;
+    src: url(./fonts/Garamond.ttf);
+}
+
+h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    padding: 4px;
+    border-radius: 10px;
+
+    &:focus {
+        border: 2px dashed rgba(255, 255, 255, 1);
+    }
+}
+
+p {
+    font-size: 2rem;
+}
+
+img {
+    border-radius: 10px;
+}
+
+body {
+    background: url(./assets/prism.png);
+}
+
+span {
+    font-style: italic;
+}
