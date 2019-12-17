@@ -268,12 +268,13 @@ html {
   letter-spacing: 3px;
   font-family: darksoul;
   color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-  font-family: darksoul, serif;
+  font-family: darksoul;
   src: url(./fonts/Garamond.ttf);
 }
 
@@ -317,11 +318,11 @@ header .hamburger {
 
 header .hamburger input {
   position: absolute;
-  left: -10px;
 }
 
 header .hamburger input:checked ~ .menu {
-  display: block;
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 header .hamburger input:checked ~ label {
@@ -338,13 +339,16 @@ header .hamburger label {
   background: rgba(48, 48, 48, 0.7);
   padding: 20px;
   border-radius: 0 0 10px 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border: 2px dashed rgba(255, 255, 255, 0);
 }
 
 header .hamburger .menu {
-  display: none;
+  -webkit-transform: translate(-200px);
+          transform: translate(-200px);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 header .hamburger .menu li {
@@ -862,4 +866,16 @@ footer {
   background: #3f3f3f;
   padding: 15px;
   margin-top: 30px;
+}
+
+@media (max-width: 660px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    text-align: center;
+  }
 }
