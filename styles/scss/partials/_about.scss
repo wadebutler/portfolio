@@ -1,3 +1,7 @@
+#about {
+    padding-top: 60px;
+}
+
 .about {
     background: $primary;
     color: white;
@@ -5,7 +9,7 @@
     flex-direction: column;
     padding: 10px;
     border-radius: 10px;
-    width: 90%;
+    width: 80%;
     margin: 10px auto;
     padding-bottom: 70px;
     transition: 0.4s;
@@ -18,36 +22,24 @@
         img {
             width: 300px;
             height: 200px;
+            margin: auto;
         }
 
         p {
             padding: 20px;
-            line-height: 30px;
+            line-height: 45px;
         }
-
-        @media (max-width:1200px) {
-            flex-direction: column-reverse;
-            align-items: center;
-
-            img {
-                width: 200px;
-            }
-        }
-    }
-
-    @media (max-width: 600px) {
-        width: 100%;
-        padding: 10px 0;
     }
 }
 
 .skills {
     background: $primary;
-    width: 90%;
+    width: 80%;
     margin: 60px auto;
     border-radius: 10px;
     padding: 10px;
     transition: 0.4s;
+    margin-top: 100px;
 
     .skillsContent {
         display: flex;
@@ -57,9 +49,12 @@
 
         li {
             text-align: center;
+            width: 250px;
+            margin-top: 30px;
 
             img {
                 width: 60px;
+                height: 65px;
                 color: white;
             }
 
@@ -68,14 +63,9 @@
             }
 
             p {
-                margin: 20px;
+                margin: 10px;
                 font-size: 3rem;
             }
         }
-    }
-
-    @media (max-width: 600px) {
-        width: 100%;
-        padding: 0;
     }
 }
