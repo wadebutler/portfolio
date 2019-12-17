@@ -273,6 +273,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 660px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 @font-face {
   font-family: darksoul;
   src: url(./fonts/Garamond.ttf);
@@ -295,6 +301,18 @@ p {
   font-size: 3rem;
 }
 
+@media (max-width: 600px) {
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  p {
+    font-size: 1.5rem;
+  }
+}
+
 img {
   border-radius: 10px;
   width: 100%;
@@ -314,6 +332,12 @@ header .hamburger {
   top: 10px;
   display: none;
   z-index: 1;
+}
+
+@media (max-width: 600px) {
+  header .hamburger {
+    display: block;
+  }
 }
 
 header .hamburger input {
@@ -374,17 +398,17 @@ header .hamburger .menu li a:hover, header .hamburger .menu li a:focus {
   color: white;
 }
 
-@media (max-width: 600px) {
-  header .hamburger {
-    display: block;
-  }
-}
-
 header .navigation {
   background: rgba(48, 48, 48, 0.7);
   position: fixed;
   right: 0;
   left: 0;
+}
+
+@media (max-width: 600px) {
+  header .navigation {
+    display: none;
+  }
 }
 
 header .navigation ul {
@@ -417,12 +441,6 @@ header .navigation ul a:focus, header .navigation ul a:hover {
   background: #0196cf;
 }
 
-@media (max-width: 600px) {
-  header .navigation {
-    display: none;
-  }
-}
-
 header .header {
   height: 90vh;
   display: -webkit-box;
@@ -442,6 +460,12 @@ header .header {
 
 header .header h1 {
   font-size: 12rem;
+}
+
+@media (max-width: 550px) {
+  header .header h1 {
+    text-align: center;
+  }
 }
 
 header .header h2 {
@@ -536,10 +560,32 @@ header .scrollDown i {
   margin: 0 auto;
 }
 
+@media (max-width: 1100px) {
+  .about .aboutContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .about .aboutContent img {
   width: 300px;
   height: 200px;
   margin: auto;
+}
+
+@media (max-width: 1100px) {
+  .about .aboutContent img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about .aboutContent img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .about .aboutContent p {
@@ -575,14 +621,43 @@ header .scrollDown i {
   margin-top: 30px;
 }
 
+@media (max-width: 750px) {
+  .skills .skillsContent li {
+    width: 200px;
+  }
+}
+
+@media (max-width: 750px) {
+  .skills .skillsContent li {
+    width: 150px;
+  }
+}
+
 .skills .skillsContent li img {
   width: 60px;
   height: 65px;
   color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 500px) {
+  .skills .skillsContent li img {
+    width: 90px;
+    height: 95px;
+  }
 }
 
 .skills .skillsContent li i {
   font-size: 6rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 500px) {
+  .skills .skillsContent li i {
+    font-size: 10rem;
+  }
 }
 
 .skills .skillsContent li p {
@@ -603,6 +678,22 @@ header .scrollDown i {
   margin: 100px auto;
 }
 
+@media (max-width: 1200px) {
+  .portfolioPiece {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolioPiece {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .portfolioPiece .pieceImage {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,6 +707,28 @@ header .scrollDown i {
 .portfolioPiece .pieceImage img {
   width: 500px;
   height: 400px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .portfolioPiece .pieceImage img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .portfolioPiece .pieceImage img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolioPiece .pieceImage img {
+    width: 300px;
+    height: 200px;
+  }
 }
 
 .portfolioPiece .pieceImage p {
@@ -637,6 +750,13 @@ header .scrollDown i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 1200px) {
+  .portfolioPiece .pieceContent .links {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .portfolioPiece .pieceContent .links a {
@@ -666,6 +786,14 @@ header .scrollDown i {
 
 .portfolioPiece .pieceContent p:nth-of-type(2) {
   margin: 40px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 500px) {
+  .portfolioPiece .pieceContent p:nth-of-type(2) {
+    margin: 20px 10px;
+  }
 }
 
 .contact {
@@ -698,6 +826,20 @@ header .scrollDown i {
           align-items: center;
   font-size: 2rem;
   margin: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .contact form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact form {
+    width: 100%;
+  }
 }
 
 .contact form .formInfo {
@@ -710,8 +852,20 @@ header .scrollDown i {
   width: 100%;
 }
 
+@media (max-width: 500px) {
+  .contact form .formInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .contact form .formInfo input {
-  width: 30%;
+  width: 40%;
   margin: 10px;
   border: 4px solid #3f3f3f;
   background: white;
@@ -758,6 +912,18 @@ header .scrollDown i {
 
 .contact form .formInfo input:focus::placeholder {
   color: white;
+}
+
+@media (max-width: 650px) {
+  .contact form .formInfo input {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact form .formInfo input {
+    width: 90%;
+  }
 }
 
 .contact form textarea {
@@ -832,7 +998,6 @@ header .scrollDown i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -842,6 +1007,8 @@ header .scrollDown i {
   font-size: 3rem;
   padding: 5px;
   margin: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contact ul li a {
@@ -861,21 +1028,15 @@ header .scrollDown i {
   background: #3f3f3f;
 }
 
+@media (max-width: 550px) {
+  .contact ul li {
+    margin: 0;
+  }
+}
+
 footer {
   text-align: center;
   background: #3f3f3f;
   padding: 15px;
   margin-top: 30px;
-}
-
-@media (max-width: 660px) {
-  html {
-    font-size: 50%;
-  }
-}
-
-@media (max-width: 550px) {
-  h1 {
-    text-align: center;
-  }
 }

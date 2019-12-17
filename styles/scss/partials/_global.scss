@@ -23,6 +23,10 @@ html {
     color: $white;
     transition: 0.5s;
     scroll-behavior: smooth;
+
+    @media (max-width: 660px) {
+        font-size: 50%;
+    }
 }
 
 @font-face {
@@ -45,6 +49,14 @@ h2 {
 
 p {
     font-size: 3rem;
+
+    @media (max-width: 600px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 1.5rem;
+    }
 }
 
 img {
