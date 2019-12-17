@@ -714,6 +714,8 @@ header .scrollDown i {
   border-radius: 10px;
   padding: 5px;
   color: #3f3f3f;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .contact form .formInfo input::-webkit-input-placeholder {
