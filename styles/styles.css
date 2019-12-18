@@ -301,6 +301,12 @@ p {
   font-size: 3rem;
 }
 
+@media (max-width: 1200px) {
+  p {
+    text-align: center;
+  }
+}
+
 @media (max-width: 600px) {
   p {
     font-size: 2rem;
@@ -754,8 +760,9 @@ header .scrollDown i {
 
 @media (max-width: 1200px) {
   .portfolioPiece .pieceContent .links {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -785,7 +792,7 @@ header .scrollDown i {
 }
 
 .portfolioPiece .pieceContent p:nth-of-type(2) {
-  margin: 40px 10px;
+  margin: 40px 10px 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
